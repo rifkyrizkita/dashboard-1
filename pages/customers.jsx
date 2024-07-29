@@ -1,10 +1,6 @@
 import { data } from "@/data/data";
 import React from "react";
-import {
-  BsPersonFIll,
-  BsPersonFill,
-  BsThreeDotsVertical,
-} from "react-icons/bs";
+import { BsPersonFill, BsThreeDotsVertical } from "react-icons/bs";
 
 function customers() {
   return (
@@ -31,13 +27,17 @@ function customers() {
                   <div className="bg-purple-100 rounded-lg p-3">
                     <BsPersonFill className="text-purple-800" />
                   </div>
-                  <p className="pl-4">{order.name.first + " " + order.name.last}</p>
+                  <p className="pl-4">
+                    {order.name.first + " " + order.name.last}
+                  </p>
                 </div>
-                <p className="text-gray-600 sm:text-left text-right">{order.name.first}@gmail.com</p>
+                <p className="text-gray-600 sm:text-left text-right truncate">
+                  {order.name.first}@gmail.com
+                </p>
                 <p className="hidden md:flex">{order.date}</p>
                 <div className="sm:flex hidden justify-between items-center">
-                    <p>{order.method}</p>
-                    <BsThreeDotsVertical/>
+                  <p>{order.method}</p>
+                  <BsThreeDotsVertical />
                 </div>
               </li>
             ))}
